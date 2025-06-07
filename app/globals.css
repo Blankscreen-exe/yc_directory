@@ -98,6 +98,9 @@
     @apply font-normal text-sm text-white-100/80;
   }
 
+  .hero-content {
+    @apply absolute;
+  }
   .hero_container {
     display: grid;
     place-items: center;
@@ -118,9 +121,12 @@
       #4dffbf 288deg,
       hsla(0, 0%, 98%, 1) 1turn
     );
-min-height: 50vh;
+    
+    min-height: 50vh;
+    
     mask: radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--hero-bg-dot-size) var(--hero-bg-dot-size),
       url("/noise-mask.png") 256px 50% / 256px 256px !important;
+
 
     mask-composite: intersect !important;
     animation: flicker 20s infinite linear !important;
