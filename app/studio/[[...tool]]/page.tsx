@@ -17,8 +17,7 @@ export const dynamic = 'force-static'
 export { metadata, viewport } from 'next-sanity/studio'
 
 export default function StudioPage() {
-  console.log('---tadaaaa ----- ', isDevEnvironment())
-  if (!isDevEnvironment()) {
+  if (isDevEnvironment()) {
     return <NextStudio config={config} />
   }
   return redirect('/')
